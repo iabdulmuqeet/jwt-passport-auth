@@ -41,7 +41,7 @@ passport.use(
 		},
 		(token, done) => {
 			try {
-				return done(null, token.user);
+				return done(null, token);
 			} catch (error) {
 				done(error, null, { message: error.message });
 			}
