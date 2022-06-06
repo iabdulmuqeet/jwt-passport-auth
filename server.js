@@ -6,8 +6,6 @@ dbConnect();
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-	console.clear();
-	console.log(
-		`DB is connected & server started listenng on http://localhost:${PORT}`
-	);
+	// console.clear();
+	console.log(`Server started listenng on http://localhost:${PORT}`);
 });

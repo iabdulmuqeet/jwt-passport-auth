@@ -9,10 +9,12 @@ const MONGO_URI =
 
 exports.dbConnect = () => {
 	try {
+		console.log('Waiting for db to connect...');
 		mongoose.connect(MONGO_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});
+		console.log('DB is connected!');
 	} catch (error) {
 		console.clear();
 		console.error(`Some error while connection to db ${error}`);

@@ -11,8 +11,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 if (app.get('env') === 'development') {
+	console.clear();
 	app.use(morgan('tiny'));
-	console.log('Morgan enable...');
+	console.log('Morgan enabled...');
 }
 
 app.use('/', allRoutes);
